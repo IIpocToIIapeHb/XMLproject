@@ -1,0 +1,30 @@
+<?xml version="1.0" encouding="UTF-8"?>
+<breakfest-menu>
+    <food id="1">
+        <name>бельгийские Вафли</name>
+        <price>$5.95</price>
+        <description>
+            две известных Бельгийские вафли с обилием настоящего
+            кленового сиропа
+        </description>
+        <calories>650</calories>
+    </food>
+
+    <food id="2">
+        <name>бельгийские Вафли с Зкмляникой</name>
+        <price>$7.95</price>
+        <description>
+            две известных Бельгийские вафли с земляникой, покрытые взбитыми сливками
+        </description>
+        <calories>900</calories>
+    </food>
+
+    <food id="3">
+        <name>бельгийские Вафли с Ягодами</name>
+        <price>$8.95</price>
+        <description>
+            две известных Бельгийские вафли с различными ягодами
+        </description>
+        <calories>900</calories>
+    </food>
+</breakfest-menu>
