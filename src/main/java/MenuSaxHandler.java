@@ -24,26 +24,25 @@ public class MenuSaxHandler extends DefaultHandler {
         System.out.println("Parsing ended.");
     }
 
-    public void startElement (String uri, String localName,
-                              String qName, Attributes attributes)
-            throws SAXException
-    {
-        System.out.println("startElement-> uri:"  + uri + ", localName: " + localName +
+    public void startElement(String uri, String localName,
+                             String qName, Attributes attributes)
+            throws SAXException {
+        System.out.println("startElement-> uri:" + uri + ", localName: " + localName +
                 ", qName " + qName);
 
         text = new StringBuilder();
-        if (qName.equals("food")){
+        if (qName.equals("food")) {
             food = new Food();
             food.setId((Integer.parseInt(attributes.getValue("id"))));
         }
     }
 
-    public void characters (char[] buffer, int start, int length)
-            throws SAXException{
+    public void characters(char[] buffer, int start, int length)
+            throws SAXException {
         text.append(buffer, start, length);
     }
 
-    public void endElement (String uri, String localName, String qName)
+    public void endElement(String uri, String localName, String qName)
             throws SAXException {
         MenuTagName tagName = MenuTagName.valueOf(qName.toUpperCase().replace("-", "_"));
         switch (tagName) {
@@ -65,10 +64,11 @@ public class MenuSaxHandler extends DefaultHandler {
                 break;
         }
     }
-        @Override
-        public void warning (SAXParseException e) throws SAXException {
-            System.err.println("WARNING:line " + e.getLineNumber() + ": " + e.getMessage());
-        }
+
+    @Override
+    public void warning(SAXParseException e) throws SAXException {
+        System.err.println("WARNING:line " + e.getLineNumber() + ": " + e.getMessage());
+    }
 
     @Override
     public void error(SAXParseException e) throws SAXException {
@@ -79,7 +79,6 @@ public class MenuSaxHandler extends DefaultHandler {
     public void fatalError(SAXParseException e) throws SAXException {
         System.err.println("FATAL:line " + e.getLineNumber() + ": " + e.getMessage());
     }
-
 
 
 }

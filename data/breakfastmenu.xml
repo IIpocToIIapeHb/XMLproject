@@ -1,5 +1,6 @@
-<?xml version="1.0" encouding="UTF-8"?>
-<breakfest-menu>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<breakfast-menu>
     <food id="1">
         <name>бельгийские Вафли</name>
         <price>$5.95</price>
@@ -27,4 +28,4 @@
         </description>
         <calories>900</calories>
     </food>
-</breakfest-menu>
+</breakfast-menu>
